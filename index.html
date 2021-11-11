@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  </head>
+
+  <body>
+    <!--<div class="main_calc">-->
+    <form class="calculator" name="myform">
+      <div class="merk_calc">K A L K U</div>
+
+      <!--Layar untuk menampilkan angka-->
+      <div class="screen">
+        <input type="text" name="display" readonly maxlength="25" />
+      </div>
+
+      <!--Tombol angka dan operator-->
+      <div class="calculator-keys">
+        <div class="top-keys">
+          <div class="row">
+            <input type="button" value="+/-" onclick="changePlusMin()" />
+            <input type="button" value="(" onclick="clickme('(')" />
+            <input type="button" value=")" onclick="clickme(')')" />
+            <input type="button" value="e" onclick="bilanganE()" />
+            <input type="button" value="Pi" onclick="clickPi()" />
+          </div>
+          <div class="row">
+            <input type="button" value="sin" onclick="clickSin()" />
+            <input type="button" value="cos" onclick="clickCos()" />
+            <input type="button" value="tan" onclick="clickTan()" />
+            <input type="button" value="exp" onclick="clickExp()" />
+            <input type="button" value="ln" onclick="clickLn()" />
+          </div>
+        </div>
+
+        <div class="bottom-keys">
+          <div class="row">
+            <input class="number" type="button" value="7" onclick="clickme('7')" />
+            <input class="number" type="button" value="8" onclick="clickme('8')" />
+            <input class="number" type="button" value="9" onclick="clickme('9')" />
+            <input class="btnDel" type="button" value="DEL" onclick="backspc()" />
+            <input class="btnAC" type="button" value="AC" onclick="fungsiAC()" />
+          </div>
+
+          <div class="row">
+            <input class="number" type="button" value="4" onclick="clickme('4')" />
+            <input class="number" type="button" value="5" onclick="clickme('5')" />
+            <input class="number" type="button" value="6" onclick="clickme('6')" />
+            <input class="operator" type="button" value="x" onclick="clickme('*')" />
+            <input class="operator" type="button" value="/" onclick="clickme('/')" />
+          </div>
+
+          <div class="row">
+            <input class="number" type="button" value="1" onclick="clickme('1')" />
+            <input class="number" type="button" value="2" onclick="clickme('2')" />
+            <input class="number" type="button" value="3" onclick="clickme('3')" />
+            <input class="operator" type="button" value="+" onclick="clickme('+')" />
+            <input class="operator" type="button" value="-" onclick="clickme('-')" />
+          </div>
+
+          <div class="row">
+            <input class="number zero-btn" type="button" value="0" onclick="clickme('0')" />
+            <input class="number" type="button" value="." onclick="clickme('.')" />
+            <input class="operator" type="button" value="%" onclick="clickPercent()" />
+            <input class="operator" type="button" value="=" onclick="resultme()" />
+          </div>
+        </div>
+      </div>
+      <!--close tag tombol-->
+    </form>
+    <!--</div>-->
+    <script src="script.js"></script>
+  </body>
+</html>
